@@ -1,0 +1,14 @@
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\bin\Debug\netcoreapp3.1\CompareTranslatorXml.exe
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\bin\Debug\netcoreapp3.1\CompareTranslatorXml.deps.json
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\bin\Debug\netcoreapp3.1\CompareTranslatorXml.runtimeconfig.json
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\bin\Debug\netcoreapp3.1\CompareTranslatorXml.runtimeconfig.dev.json
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\bin\Debug\netcoreapp3.1\CompareTranslatorXml.dll
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\bin\Debug\netcoreapp3.1\CompareTranslatorXml.pdb
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.MainForm.resources
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.csproj.GenerateResource.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.AssemblyInfoInputs.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.AssemblyInfo.cs
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.csproj.CoreCompileInputs.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.dll
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.pdb
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\obj\Debug\netcoreapp3.1\CompareTranslatorXml.genruntimeconfig.cache
