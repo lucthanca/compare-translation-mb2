@@ -16,4 +16,10 @@
     <Folder Include="Assets\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <OpenApiReference Include="OpenAPIs\SOAP.svc" CodeGenerator="NSwagCSharp" Namespace="TranslatorService" ClassName="MicrosoftTranslator">
+      <SourceUri>https://api.microsofttranslator.com/v1/SOAP.svc</SourceUri>
+    </OpenApiReference>
+  </ItemGroup>
+
 </Project>
