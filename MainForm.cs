@@ -132,6 +132,7 @@ namespace CompareTranslatorXml
             numberCountTxt.Text = listTextGrid.Rows.Count.ToString();
             foreach (DataGridViewRow row in listTextGrid.Rows)
             {
+                row.DefaultCellStyle.BackColor = Color.White;
                 if (row.Index % 2 == 0)
                 {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 194, 233, 251);
@@ -284,6 +285,14 @@ namespace CompareTranslatorXml
         {
             try
             {
+                if (VnLoadTxt.Text == null || VnLoadTxt.Text.Equals(""))
+                {
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        saveFileDialog.DefaultExt = 
+                        VnLoadTxt.Text = saveFileDialog.FileName;
+                    }
+                }
                 progressBar.Maximum = strings.Count;
                 foreach (StringObject str in strings)
                 {

@@ -57,6 +57,7 @@ namespace CompareTranslatorXml
             this.EnLoadBtn = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
             this.actionPanel = new System.Windows.Forms.Panel();
+            this.reformatGridBtn = new System.Windows.Forms.Button();
             this.saveVnBtn = new System.Windows.Forms.Button();
             this.listTextGroup = new System.Windows.Forms.GroupBox();
             this.listTextGrid = new System.Windows.Forms.DataGridView();
@@ -65,7 +66,7 @@ namespace CompareTranslatorXml
             this.En = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reformatGridBtn = new System.Windows.Forms.Button();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.navMenu.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.inputContainer.SuspendLayout();
@@ -268,6 +269,13 @@ namespace CompareTranslatorXml
             resources.ApplyResources(this.actionPanel, "actionPanel");
             this.actionPanel.Name = "actionPanel";
             // 
+            // reformatGridBtn
+            // 
+            resources.ApplyResources(this.reformatGridBtn, "reformatGridBtn");
+            this.reformatGridBtn.Name = "reformatGridBtn";
+            this.reformatGridBtn.UseVisualStyleBackColor = true;
+            this.reformatGridBtn.Click += new System.EventHandler(this.reformatGridBtn_Click);
+            // 
             // saveVnBtn
             // 
             resources.ApplyResources(this.saveVnBtn, "saveVnBtn");
@@ -340,13 +348,6 @@ namespace CompareTranslatorXml
             resources.ApplyResources(this.Vn, "Vn");
             this.Vn.Name = "Vn";
             // 
-            // reformatGridBtn
-            // 
-            resources.ApplyResources(this.reformatGridBtn, "reformatGridBtn");
-            this.reformatGridBtn.Name = "reformatGridBtn";
-            this.reformatGridBtn.UseVisualStyleBackColor = true;
-            this.reformatGridBtn.Click += new System.EventHandler(this.reformatGridBtn_Click);
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -418,6 +419,7 @@ namespace CompareTranslatorXml
         private System.Windows.Forms.DataGridViewTextBoxColumn Cn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vn;
         private System.Windows.Forms.Button reformatGridBtn;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
