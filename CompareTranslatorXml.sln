@@ -1,25 +1,55 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareTranslatorXml", "CompareTranslatorXml.csproj", "{BCF8C6AB-7970-4E20-9102-75D88096E788}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareTranslatorXml", "CompareTranslatorXml\CompareTranslatorXml.csproj", "{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A} = {0E9D874E-5354-465E-9EC3-F7A35C268A8A}
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09} = {C636A9AF-6648-4CC6-9905-A972CFBCEE09}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoxManager", "..\MessageBoxManager\MessageBoxManager.csproj", "{0E9D874E-5354-465E-9EC3-F7A35C268A8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LtcLib", "..\ChreneLib\LtcLib.csproj", "{C636A9AF-6648-4CC6-9905-A972CFBCEE09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BCF8C6AB-7970-4E20-9102-75D88096E788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCF8C6AB-7970-4E20-9102-75D88096E788}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCF8C6AB-7970-4E20-9102-75D88096E788}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCF8C6AB-7970-4E20-9102-75D88096E788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Release|x86.ActiveCfg = Release|Any CPU
+		{7BC3EAAB-0DE5-4FA2-A5A3-A5CD2D62192C}.Release|x86.Build.0 = Release|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Debug|x86.Build.0 = Debug|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Release|x86.ActiveCfg = Release|Any CPU
+		{0E9D874E-5354-465E-9EC3-F7A35C268A8A}.Release|x86.Build.0 = Release|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Debug|x86.Build.0 = Debug|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Release|x86.ActiveCfg = Release|Any CPU
+		{C636A9AF-6648-4CC6-9905-A972CFBCEE09}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A87A09B0-C0A4-4204-B3FB-B425C3AC051A}
+		SolutionGuid = {14C6ED6E-C58D-4E9B-B81E-DC2012D041D9}
 	EndGlobalSection
 EndGlobal
