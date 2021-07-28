@@ -310,6 +310,7 @@
             this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Settings";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CloseForm);
             this.SettingsTabPanel.ResumeLayout(false);
             this.SettingsTabControl.ResumeLayout(false);
             this.TabGeneral.ResumeLayout(false);

@@ -14,8 +14,8 @@ namespace CompareTranslatorXml
         public const string AUTO_SAVE_TYPE_KEY = "AutoSaveType";
         public const string IDLE_TIME = "AutoSaveTypeIdleTime";
 
-        private IniFile iniFile;
-        private Dictionary<string, object> defaultConfigs = new Dictionary<string, object>()
+        readonly private IniFile iniFile;
+        private readonly Dictionary<string, object> defaultConfigs = new Dictionary<string, object>()
         {
             {LANGUAGE_KEY, LanguageResolver.DEFAULT_LANGUAGE},
             {ENABLE_AUTO_SAVE_KEY, "True"},
@@ -51,7 +51,7 @@ namespace CompareTranslatorXml
         }
 
         /// <summary>
-        /// Lấy ra giá trị cấu hình của một section và 1 key đưa vào
+        /// Lấy ra giá trị cấu hình của một section và 1 key đưa vào, nếu key này chưa có trong config thì ghi thêm vào
         /// </summary>
         /// <param name="key"></param>
         /// <param name="section"></param>
@@ -60,7 +60,11 @@ namespace CompareTranslatorXml
         {
             string value = Read(section, key);
             if (string.IsNullOrEmpty(value))
+            {
+                // write default config to config file
+                Write(key, defaultConfigs[key].ToString());
                 return defaultConfigs[key].ToString();
+            }
             return value;
         }
     }

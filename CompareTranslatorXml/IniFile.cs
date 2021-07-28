@@ -1,7 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text;
 using System.IO;
-using System.Windows.Forms;
 
 namespace CompareTranslatorXml
 {

@@ -7,7 +7,7 @@ namespace CompareTranslatorXml
         /// <summary>
         /// Biến dùng để phiên dịch ngôn ngữ của app theo ngôn ngữ được người dùng cài đặt
         /// </summary>
-        LanguageResolver translator = new LanguageResolver();
+        readonly LanguageResolver translator = new LanguageResolver();
 
         /// <summary>
         /// Form hiển thị thông tin của ứng dụng

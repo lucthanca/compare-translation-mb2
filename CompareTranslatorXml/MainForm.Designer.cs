@@ -374,7 +374,6 @@ namespace CompareTranslatorXml
             this.MainMenuStrip = this.navMenu;
             this.Name = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.navMenu.ResumeLayout(false);
             this.navMenu.PerformLayout();
             this.statusStrip.ResumeLayout(false);

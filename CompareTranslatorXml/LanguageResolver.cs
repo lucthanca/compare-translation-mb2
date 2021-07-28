@@ -1,35 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel;
+using CoreEventArgs = System.EventArgs;
+using CompareTranslatorXml.EventArguments;
 
 namespace CompareTranslatorXml
 {
-    class LanguageResolver: INotifyPropertyChanged
+    class LanguageResolver
     {
         // Khai báo custom event
-        public event PropertyChangedEventHandler PropertyChanged;
+        // public event PropertyChangedEventHandler PropertyChanged;
+        public static event EventHandler ChangeLanguage;
 
         public const string DEFAULT_LANGUAGE = "vn";
 
-        private string currentLanguage;
+        private static string currentLanguage;
         private static IniFile iniFile;
-        private Config config;
+        readonly private Config config = new Config();
 
-        public string CurrentLanguage
+        public static string CurrentLanguage
         {
             get { return currentLanguage; }
             set
             {
                 currentLanguage = value;
-
-                OnPropertyChanged("CurrentLanguage");
+                RefreshIniLanguageFile();
+                OnLanguageChanged("CurrentLanguage", new LanguageEventArg() { Language = value });
             }
         }
 
-        protected void OnPropertyChanged(string language)
+        /// <summary>
+        /// Trigger các subscriber event method
+        /// </summary>
+        /// <param name="language"></param>
+        private static void OnLanguageChanged(string language, CoreEventArgs e)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(language));
+            ChangeLanguage?.Invoke(language, e);
         }
 
         /// <summary>
@@ -39,7 +43,7 @@ namespace CompareTranslatorXml
         /// </summary>
         public LanguageResolver()
         {
-            if (CurrentLanguage == "" || CurrentLanguage == null)
+            if (string.IsNullOrEmpty(CurrentLanguage))
             {
                 InitializeAppLanguage();
             }
@@ -49,36 +53,26 @@ namespace CompareTranslatorXml
         /// Khởi tạo cấu hình ngôn ngữ của app
         /// </summary>
         /// <returns>trả về chính đối tượng này</returns>
-        public LanguageResolver InitializeAppLanguage()
+        public LanguageResolver InitializeAppLanguage(bool force = false)
         {
-            config = new Config();
-            CurrentLanguage = config.GetValue(Config.LANGUAGE_KEY);
-            // Ghi config mặc định, đặt lang mặc định 
-            if (CurrentLanguage.Equals(""))
+            if (force)
             {
-                config.Write(Config.LANGUAGE_KEY, DEFAULT_LANGUAGE);
-                CurrentLanguage = LanguageResolver.DEFAULT_LANGUAGE;
+                CurrentLanguage = config.GetValue(Config.LANGUAGE_KEY);
+            } else if (string.IsNullOrEmpty(CurrentLanguage))
+            {
+                CurrentLanguage = config.GetValue(Config.LANGUAGE_KEY);
             }
-            string languagePath = string.Format(@"Languages\{0}.ini", CurrentLanguage);
-            SetInitFile(new IniFile(languagePath));
 
             return this;
         }
 
         /// <summary>
-        /// Set biến đã đọc file ngôn ngữ
+        /// Thiết lập lại đường dẫn file ngôn ngữ dựa vào ngôn ngữ hiện tại được chọn
         /// </summary>
-        /// <param name="file"></param>
-        public void SetInitFile(IniFile file)
+        private static void RefreshIniLanguageFile()
         {
-            iniFile = file;
-        }
-
-        public string Read(string section, string key, string defaultString)
-        {
-            string resultStr = iniFile.Read(section, key);
-            if (!resultStr.Equals("")) return resultStr;
-            return defaultString;
+            string languagePath = $@"Languages\{CurrentLanguage}.ini";
+            iniFile = new IniFile(languagePath);
         }
 
         /// <summary>
@@ -90,7 +84,9 @@ namespace CompareTranslatorXml
         /// <returns></returns>
         public string Translate(string key, string defaultText, string section = "strings")
         {
-            return Read(section, key, defaultText);
+            string resultStr = iniFile.Read(section, key);
+            if (!resultStr.Equals("")) return resultStr;
+            return defaultText;
         }
     }
 }

@@ -13,51 +13,68 @@ namespace CompareTranslatorXml
 {
     public partial class SettingsForm : Form
     {
-        LanguageResolver translator = new LanguageResolver();
-        private Config config = new Config();
+        readonly LanguageResolver translator = new LanguageResolver();
+        readonly private Config config = new Config();
 
         public SettingsForm()
         {
+            LanguageResolver.ChangeLanguage += OnLanguageChanged;
             InitializeComponent();
             InitializeLocalComponent();
             InitializeSettings();
-
-            LanguageResolver.PropertyChanged += new PropertyChangedEventHandler(LanguageChanged);
-        }
-
-        private void LanguageChanged()
-        {
-
         }
 
         /// <summary>
-        /// Tải các cài đặt đã được cấu hình
+        /// Khi ngôn ngữ được thay đổi thì sẽ kích hoạt refresh lại context khi ứng dụng đang chạy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnLanguageChanged(object sender, EventArgs e)
+        {
+            InitializeLocalComponent();
+
+            // Set giá trị ngôn ngữ đang chọn cho combobox
+            SetSelectedValueLanguageCb(true);
+        }
+
+        /// <summary>
+        /// Tải các cài đặt đã được cấu hình, khi form được khởi tạo
         /// </summary>
         private void InitializeSettings()
         {
-            SelectLangCb.SelectedValue = config.GetValue(Config.LANGUAGE_KEY);
+            SetSelectedValueLanguageCb();
             AutoSaveChk.Checked = bool.Parse(config.GetValue(Config.ENABLE_AUTO_SAVE_KEY));
+            // AutoSaveTypeCb.SelectedValueChanged += AutoSaveSelectIdleTimeType;
             AutoSaveTypeCb.SelectedValue = int.Parse(config.GetValue(Config.AUTO_SAVE_TYPE_KEY));
             IdleTimeTxt.Text = config.GetValue(Config.IDLE_TIME);
         }
 
+        /// <summary>
+        /// Thiết lập ngôn ngữ ui context
+        /// </summary>
         private void InitializeLocalComponent()
         {
+            Text = translator.Translate("0035", "Cài Đặt");
+
             #region Auto Save Setting
             AutoSaveChk.Text = translator.Translate("0034", "Auto Save");
             #endregion
 
             #region Saving Settings
             /// INIT AutoSaveType Items
-            List<AutoSaveType> items = new List<AutoSaveType>()
+            AutoSaveType[] autoSaveTypeItems = new AutoSaveType[]
             {
-                { new AutoSaveType() { Value = AutoSaveType.IDLE, Label = translator.Translate("0027", "Không làm gì")} },
-                { new AutoSaveType() { Value = AutoSaveType.END_EDIT, Label = translator.Translate("0028", "Sửa xong một dòng")} }
+                new AutoSaveType() { Value = AutoSaveType.IDLE, Label = translator.Translate("0027", "Không làm gì")},
+                new AutoSaveType() { Value = AutoSaveType.END_EDIT, Label = translator.Translate("0028", "Sửa xong một dòng")}
             };
-            AutoSaveTypeCb.DataSource = items;
+            // Loại bỏ trigger tới event
+            AutoSaveTypeCb.SelectedValueChanged -= AutoSaveSelectIdleTimeType;
+            AutoSaveTypeCb.DataSource = autoSaveTypeItems;
             AutoSaveTypeCb.DisplayMember = "Label";
             AutoSaveTypeCb.ValueMember = "Value";
-            AutoSaveTypeCb.SelectedValue = AutoSaveType.END_EDIT;
+            // Kích hoạt lại các trigger event
+            AutoSaveTypeCb.SelectedValueChanged += AutoSaveSelectIdleTimeType;
+
             // Init Language
             SavingGroupBox.Text = translator.Translate("0029", "Lưu trữ");
             AutoSaveTypeLabel.Text = translator.Translate("0030", "Tự động lưu khi");
@@ -66,15 +83,21 @@ namespace CompareTranslatorXml
             #endregion
 
             #region Language settings
-            List<Language> langs = new List<Language>()
+            Language[] langs = new Language[]
             {
-                { new Language() { Label = translator.Translate("vn", "Tiếng Việt", "languages"), Code = Language.VN} },
-                { new Language() { Label = translator.Translate("en", "Tiếng anh", "languages"), Code = Language.EN } }
+                new Language() { Label = translator.Translate("vn", "Tiếng Việt", "languages"), Code = Language.VN},
+                new Language() { Label = translator.Translate("en", "Tiếng anh", "languages"), Code = Language.EN }
             };
+            SelectLangCb.SelectedValueChanged -= ChangeLanguage;
             SelectLangCb.DataSource = langs;
             SelectLangCb.DisplayMember = "Label";
             SelectLangCb.ValueMember = "Code";
             SelectLangLbl.Text = translator.Translate("0033", "Ngôn ngữ");
+            SelectLangCb.SelectedValueChanged += ChangeLanguage;
+            #endregion
+
+            #region Button Action
+            CancelBtn.Text = translator.Translate("0025", "Cancel");
             #endregion
         }
 
@@ -156,14 +179,44 @@ namespace CompareTranslatorXml
         /// <param name="e"></param>
         private void CancelBtn_Click(object sender, EventArgs e)
         {
+            // Force reset to config
+            translator.InitializeAppLanguage(true);
             Close();
+        }
+
+        private void CloseForm(object sender, FormClosingEventArgs e)
+        {
+            // Force reset to config
+            translator.InitializeAppLanguage(true);
         }
 
         private void ChangeLanguage(object sender, EventArgs e)
         {
-            
+            LanguageResolver.CurrentLanguage = SelectLangCb.SelectedValue.ToString();
         }
 
-
+        /// <summary>
+        /// Set giá trị đang được chọn cho combobox ngôn ngữ
+        /// </summary>
+        /// <param name="useCurrent">Đặt giá trị theo ngôn ngữ của app hiện tại hay là lấy trong file cấu hình | Mặc định là <see cref="System.Boolean.FalseString"/></param>
+        /// <param name="notifyToSubcriber">Xác định xem việc đặt giá trị này có thông báo cho các subcriber khác biết không | Mặc định là <see cref="System.Boolean.FalseString"/></param>
+        private void SetSelectedValueLanguageCb(bool useCurrent = false, bool notifyToSubcriber = false)
+        {
+            string languageCode = LanguageResolver.CurrentLanguage;
+            if (!useCurrent)
+            {
+                languageCode = config.GetValue(Config.LANGUAGE_KEY);
+            }
+            if (!notifyToSubcriber)
+            {
+                SelectLangCb.SelectedValueChanged -= ChangeLanguage;
+                SelectLangCb.SelectedValue = languageCode;
+                SelectLangCb.SelectedValueChanged += ChangeLanguage;
+            }
+            else
+            {
+                SelectLangCb.SelectedValue = languageCode;
+            }
+        }
     }
 }

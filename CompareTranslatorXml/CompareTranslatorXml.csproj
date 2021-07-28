@@ -60,6 +60,7 @@
       <DependentUpon>AboutAuthorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Config.cs" />
+    <Compile Include="EventArgs\LanguageEventArg.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,11 +127,14 @@
     <None Include="Resources\Logo Zen Circle LTC_.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ChreneLib\LtcLib.csproj">
+    <Folder Include="Resolver\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LtcLib\LtcLib.csproj">
       <Project>{c636a9af-6648-4cc6-9905-a972cfbcee09}</Project>
       <Name>LtcLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\MessageBoxManager\MessageBoxManager.csproj">
+    <ProjectReference Include="..\MessageBoxManager\MessageBoxManager.csproj">
       <Project>{0e9d874e-5354-465e-9ec3-f7a35c268a8a}</Project>
       <Name>MessageBoxManager</Name>
     </ProjectReference>

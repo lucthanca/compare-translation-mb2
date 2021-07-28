@@ -17,22 +17,21 @@ namespace CompareTranslatorXml
         SortedBindingList<StringObject> strings = new SortedBindingList<StringObject>();
 
         Processor processor;
-        OpenFileDialog openFileDialog;
-        readonly LanguageResolver LanguageResolver = new LanguageResolver().InitializeAppLanguage();
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        readonly LanguageResolver translator = new LanguageResolver();
         bool isCurrentFileTxtSet = false;
 
 
         public MainForm()
         {
+            LanguageResolver.ChangeLanguage += OnLanguageChanged;
             InitializeComponent();
+            InitializeLocalComponent();
         }
 
-        /**
-         * Load app settings
-         */
-        private void LoadSettings()
+        private void OnLanguageChanged(object sender, EventArgs e)
         {
-            ProcessLanguageText();
+            InitializeLocalComponent();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -54,12 +53,12 @@ namespace CompareTranslatorXml
                 if (modifiedString != null && modifiedString.Id != null)
                 {
 
-                    MessageBoxManager.Yes = LanguageResolver.Read("strings", "0023", "Lưu");
-                    MessageBoxManager.No = LanguageResolver.Read("strings", "0024", "Không lưu");
-                    MessageBoxManager.Cancel = LanguageResolver.Read("strings", "0025", "Huỷ bỏ");
+                    MessageBoxManager.Yes = translator.Translate("0023", "Lưu");
+                    MessageBoxManager.No = translator.Translate("0024", "Không lưu");
+                    MessageBoxManager.Cancel = translator.Translate("0025", "Huỷ bỏ");
                     MessageBoxManager.Register();
 
-                    DialogResult dialogResult = MessageBox.Show(LanguageResolver.Read("strings", "0007", "Có sự thay đổi dữ liệu. Bạn vẫn muốn thoát tool?"), LanguageResolver.Read("strings", "0008", "Nhắc nhở"), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult dialogResult = MessageBox.Show(translator.Translate("0007", "Có sự thay đổi dữ liệu. Bạn vẫn muốn thoát tool?"), translator.Translate("0008", "Nhắc nhở"), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     MessageBoxManager.Unregister();
                     if (dialogResult == DialogResult.Yes)
                     {
@@ -80,43 +79,38 @@ namespace CompareTranslatorXml
             return true;
         }
 
-        private void ProcessLanguageText()
+        private void InitializeLocalComponent()
         {
             #region MenuStrip
-            fileItem.Text = LanguageResolver.Read("strings", "0001", "Tệp");
-            exitItem.Text = LanguageResolver.Read("strings", "0002", "Thư Mục");
-            editItem.Text = LanguageResolver.Read("strings", "0003", "Chỉnh sửa");
-            optionsItem.Text = LanguageResolver.Read("strings", "0004", "Cài đặt");
-            helpItem.Text = LanguageResolver.Read("strings", "0005", "Trợ giúp");
-            aboutItem.Text = LanguageResolver.Read("strings", "0006", "Về tôi");
-            clearData.Text = Translate("0018", "Làm sạch");
+            fileItem.Text = translator.Translate("0001", "Tệp");
+            exitItem.Text = translator.Translate("0002", "Thư Mục");
+            editItem.Text = translator.Translate("0003", "Chỉnh sửa");
+            optionsItem.Text = translator.Translate("0004", "Cài đặt");
+            helpItem.Text = translator.Translate("0005", "Trợ giúp");
+            aboutItem.Text = translator.Translate("0006", "Về tôi");
+            clearData.Text = translator.Translate("0018", "Làm sạch");
             #endregion
 
             #region Status Strip
-            currentFileLbl.Text = Translate("0010", "Tệp đang thực hiện:");
-            currentFileTxt.Text = Translate("0011", "Không");
-            NumberCountLbl.Text = Translate("0019", "Số dòng:");
+            currentFileLbl.Text = translator.Translate("0010", "Tệp đang thực hiện:");
+            currentFileTxt.Text = translator.Translate("0011", "Không");
+            NumberCountLbl.Text = translator.Translate("0019", "Số dòng:");
             #endregion
 
             #region GridView
-            listTextGroup.Text = Translate("0012", "Danh sách các text");
-            listTextGrid.Columns["Index"].HeaderText = Translate("0013", "Thứ tự");
-            listTextGrid.Columns["Id"].HeaderText = Translate("0014", "Mã text");
-            listTextGrid.Columns["En"].HeaderText = Translate("0015", "Tiếng Anh");
-            listTextGrid.Columns["Cn"].HeaderText = Translate("0016", "Tiếng Trung");
-            listTextGrid.Columns["Vn"].HeaderText = Translate("0017", "Tiếng Việt");
+            listTextGroup.Text = translator.Translate("0012", "Danh sách các text");
+            listTextGrid.Columns["Index"].HeaderText = translator.Translate("0013", "Thứ tự");
+            listTextGrid.Columns["Id"].HeaderText = translator.Translate("0014", "Mã text");
+            listTextGrid.Columns["En"].HeaderText = translator.Translate("0015", "Tiếng Anh");
+            listTextGrid.Columns["Cn"].HeaderText = translator.Translate("0016", "Tiếng Trung");
+            listTextGrid.Columns["Vn"].HeaderText = translator.Translate("0017", "Tiếng Việt");
             #endregion
 
             #region INPUT Txt
-            EnLoadTxt.Placeholder = Translate("0020", "Chọn file hoặc kéo thả file vào đây");
-            VnLoadTxt.Placeholder = Translate("0020", "Chọn file hoặc kéo thả file vào đây");
-            CnLoadTxt.Placeholder = Translate("0020", "Chọn file hoặc kéo thả file vào đây");
+            EnLoadTxt.Placeholder = translator.Translate("0020", "Chọn file hoặc kéo thả file vào đây");
+            VnLoadTxt.Placeholder = translator.Translate("0020", "Chọn file hoặc kéo thả file vào đây");
+            CnLoadTxt.Placeholder = translator.Translate("0020", "Chọn file hoặc kéo thả file vào đây");
             #endregion
-        }
-
-        private string Translate(string key, string defaultText,string section = "strings")
-        {
-            return LanguageResolver.Read(section, key, defaultText);
         }
 
         private void EnLoadBtn_Click(object sender, EventArgs e)
@@ -131,12 +125,6 @@ namespace CompareTranslatorXml
             }
 
             RefreshGridView();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            this.LoadSettings();
-            openFileDialog = new OpenFileDialog();
         }
 
         private void RefreshGridView()
@@ -225,7 +213,7 @@ namespace CompareTranslatorXml
             CnLoadTxt.Text = null;
             VnLoadTxt.Text = null;
             strings.Clear();
-            currentFileTxt.Text = Translate("0011", "Không");
+            currentFileTxt.Text = translator.Translate("0011", "Không");
             isCurrentFileTxtSet = false;
             numberCountTxt.Text = "0";
         }
@@ -293,7 +281,7 @@ namespace CompareTranslatorXml
                 // Add to string objects
                 // processor.AddOrUpdate(prop, ref strings, foundStringObject);
             } catch (Exception exception) {
-                MessageBox.Show(Translate("0009", "Lỗi") + ": " + exception.Message);
+                MessageBox.Show(translator.Translate("0009", "Lỗi") + ": " + exception.Message);
             }
         }
 
@@ -313,9 +301,9 @@ namespace CompareTranslatorXml
                 RefreshGridView();
             } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Translate("0009", "Lỗi"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, translator.Translate("0009", "Lỗi"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 progressStatus.ForeColor = Color.Red;
-                progressStatus.Text = Translate("0022", "That bai");
+                progressStatus.Text = translator.Translate("0022", "That bai");
             }
         }
 
@@ -332,7 +320,7 @@ namespace CompareTranslatorXml
             }
 
             progressStatus.ForeColor = Color.Green;
-            progressStatus.Text = Translate("0021", "Thành công");
+            progressStatus.Text = translator.Translate("0021", "Thành công");
         }
 
         private void exitItem_Click(object sender, EventArgs e)

@@ -1,0 +1,11 @@
+C:\Users\lucthanca\Downloads\ChreneLib\ChreneLib\bin\Debug\ChreneLib.dll
+C:\Users\lucthanca\Downloads\ChreneLib\ChreneLib\bin\Debug\ChreneLib.pdb
+C:\Users\lucthanca\Downloads\ChreneLib\ChreneLib\obj\Debug\ChreneLib.csproj.CoreCompileInputs.cache
+C:\Users\lucthanca\Downloads\ChreneLib\ChreneLib\obj\Debug\ChreneLib.dll
+C:\Users\lucthanca\Downloads\ChreneLib\ChreneLib\obj\Debug\ChreneLib.pdb
+C:\Users\lucthanca\source\repos\ChreneLib\bin\Debug\ChreneLib.dll
+C:\Users\lucthanca\source\repos\ChreneLib\bin\Debug\ChreneLib.pdb
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\ChreneLib.csproj.AssemblyReference.cache
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\ChreneLib.csproj.CoreCompileInputs.cache
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\ChreneLib.dll
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\ChreneLib.pdb
