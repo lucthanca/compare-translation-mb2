@@ -1,0 +1,17 @@
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.csproj.AssemblyReference.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.MainForm.resources
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.Properties.Resources.resources
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.csproj.GenerateResource.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.csproj.CoreCompileInputs.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\bin\Debug\CompareTranslatorXml.exe.config
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\bin\Debug\CompareTranslatorXml.exe
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\bin\Debug\CompareTranslatorXml.pdb
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\bin\Debug\MessageBoxManager.dll
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\bin\Debug\MessageBoxManager.pdb
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.csproj.CopyComplete
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.exe
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.pdb
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\bin\Debug\LtcLib.dll
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\bin\Debug\LtcLib.pdb
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.AboutAuthorForm.resources
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\CompareTranslatorXml\obj\Debug\CompareTranslatorXml.SettingsForm.resources

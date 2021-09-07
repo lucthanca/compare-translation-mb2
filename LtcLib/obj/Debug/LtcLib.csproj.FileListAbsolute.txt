@@ -1,0 +1,12 @@
+C:\Users\lucthanca\source\repos\ChreneLib\bin\Debug\LtcLib.dll
+C:\Users\lucthanca\source\repos\ChreneLib\bin\Debug\LtcLib.pdb
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\LtcLib.csproj.CoreCompileInputs.cache
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\LtcLib.dll
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\LtcLib.pdb
+C:\Users\lucthanca\source\repos\ChreneLib\obj\Debug\LtcLib.csproj.AssemblyReference.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\LtcLib\bin\Debug\LtcLib.dll
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\LtcLib\bin\Debug\LtcLib.pdb
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\LtcLib\obj\Debug\LtcLib.csproj.AssemblyReference.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\LtcLib\obj\Debug\LtcLib.csproj.CoreCompileInputs.cache
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\LtcLib\obj\Debug\LtcLib.dll
+C:\Users\lucthanca\source\repos\CompareTranslatorXml\LtcLib\obj\Debug\LtcLib.pdb
