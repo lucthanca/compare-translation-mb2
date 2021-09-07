@@ -50,14 +50,24 @@ namespace CompareTranslatorXml
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show(LanguageResolver.Read("strings", "0007", "Bạn có muốn thoát tool?"), LanguageResolver.Read("strings", "0008", "Nhắc nhở"), MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (dialogResult == DialogResult.Yes)
+            try
+            {
+                StringObject modifiedString = strings.FirstOrDefault(textObject => textObject.HasChanged == true);
+                if (modifiedString != null && modifiedString.Id != null)
+                {
+                    DialogResult dialogResult = MessageBox.Show(LanguageResolver.Read("strings", "0007", "Có sự thay đổi dữ liệu. Bạn vẫn muốn thoát tool?"), LanguageResolver.Read("strings", "0008", "Nhắc nhở"), MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        Application.ExitThread();
+                    }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                }
+            } catch (Exception)
             {
                 Application.ExitThread();
-            } else
-            {
-                e.Cancel = true;
             }
         }
 
@@ -133,6 +143,12 @@ namespace CompareTranslatorXml
             foreach (DataGridViewRow row in listTextGrid.Rows)
             {
                 row.DefaultCellStyle.BackColor = Color.White;
+                StringObject stringText = strings.FirstOrDefault(text => text.Id == row.Cells["id"].Value.ToString() && text.HasChanged == true);
+                if (stringText != null && stringText.Id != null)
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 195, 143);
+                    continue;
+                }
                 if (row.Index % 2 == 0)
                 {
                     row.DefaultCellStyle.BackColor = Color.FromArgb(255, 194, 233, 251);
@@ -255,30 +271,28 @@ namespace CompareTranslatorXml
         {
             try
             {
-                //MessageBox.Show(listTextGrid.Columns[e.ColumnIndex].DataPropertyName.ToString());
-                //MessageBox.Show(listTextGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
-                /* _UpdateToList(
-                    listTextGrid.Rows[e.RowIndex].Cells["id"].Value.ToString(),
-                    listTextGrid.Columns[e.ColumnIndex].DataPropertyName.ToString(),
-                    listTextGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()
-                    );
-                */
+                string id = listTextGrid.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                string prop = listTextGrid.Columns[e.ColumnIndex].DataPropertyName.ToString();
+                string newValue = listTextGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                StringObject foundStringObject = strings.FirstOrDefault(textObject => textObject.Id == id);
+                if (foundStringObject == null || foundStringObject.Id == null)
+                {
+                    MessageBox.Show("Not found!");
+                    return;
+                }
+                foundStringObject.HasChanged = !newValue.Equals(foundStringObject.GetType().GetProperty("Origin" + prop).GetValue(foundStringObject).ToString());
+
+                if (foundStringObject.HasChanged)
+                {
+                    RefreshGridView();
+                    //listTextGrid.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(183, 85, 1, 100);
+                    //listTextGrid.Refresh();
+                }
+                // Add to string objects
+                // processor.AddOrUpdate(prop, ref strings, foundStringObject);
             } catch (Exception exception) {
                 MessageBox.Show(Translate("0009", "Lỗi") + ": " + exception.Message);
             }
-        }
-
-        private void _UpdateToList(string id, string key, string value)
-        {
-            StringObject foundStringObject = strings.SingleOrDefault(textObject => textObject.Id == id);
-
-            if (foundStringObject == null || foundStringObject.Id == null)
-            {
-                MessageBox.Show("Not found!");
-                return;
-            }
-
-            MessageBox.Show(foundStringObject.Vn.ToString());
         }
 
         private void saveVnBtn_Click(object sender, EventArgs e)
@@ -298,19 +312,19 @@ namespace CompareTranslatorXml
                 {
                     processor = new Processor(VnLoadTxt.Text);
                     processor.AddOrUpdate(str);
+                    str.OriginVn = str.Vn;
+                    str.HasChanged = false;
                     progressBar.PerformStep();
                 }
                 
                 progressStatus.ForeColor = Color.Green;
                 progressStatus.Text = Translate("0021", "Thành công");
+                RefreshGridView();
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, Translate("0009", "Lỗi"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 progressStatus.ForeColor = Color.Red;
                 progressStatus.Text = Translate("0022", "That bai");
-            } finally
-            {
-                progressBar.Maximum = 100;
             }
         }
 

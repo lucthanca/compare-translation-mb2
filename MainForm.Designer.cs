@@ -297,6 +297,7 @@ namespace CompareTranslatorXml
             this.listTextGrid.AllowUserToOrderColumns = true;
             this.listTextGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.listTextGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listTextGrid.AutoGenerateColumns = false;
             this.listTextGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Index,
             this.Id,

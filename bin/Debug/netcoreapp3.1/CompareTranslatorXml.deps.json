@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "CompareTranslatorXml/1.0.0": {
+        "dependencies": {
+          "MessageBoxManager": "1.0.0"
+        },
         "runtime": {
           "CompareTranslatorXml.dll": {}
+        }
+      },
+      "MessageBoxManager/1.0.0": {
+        "runtime": {
+          "MessageBoxManager.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CompareTranslatorXml/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MessageBoxManager/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

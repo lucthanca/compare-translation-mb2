@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "/dwunitTTsKXvv9i7jEwkv9Xlp+WqiR4+9AjSUYdruVLU7DinI1/SMdN4a1qXHyCSS1prvfWgsheUhR1hYpGBQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\lucthanca\\source\\repos\\CompareTranslatorXml\\CompareTranslatorXml.csproj",
+  "dgSpecHash": "+6JyNB15ERuc+H8ColJBX45PTWak3TBEYjh0pPBpFe60veK9RI4Q7J8liKUAxjoZ6tdOu0CD+x5Vb1wZ/ZLspw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\lucthanca\\Documents\\bannerlord\\compare-tool\\CompareTranslatorXml.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to read project information for 'CompareTranslatorXml': Invalid framework identifier ''."
+    }
+  ]
 }

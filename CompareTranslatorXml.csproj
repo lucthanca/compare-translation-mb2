@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>CompareTranslatorXml.Program</StartupObject>
     <ApplicationIcon>bannerlord_icon.ico</ApplicationIcon>
@@ -20,6 +20,10 @@
     <OpenApiReference Include="OpenAPIs\SOAP.svc" CodeGenerator="NSwagCSharp" Namespace="TranslatorService" ClassName="MicrosoftTranslator">
       <SourceUri>https://api.microsofttranslator.com/v1/SOAP.svc</SourceUri>
     </OpenApiReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Downloads\MessageBoxManager\MessageBoxManager.csproj" />
   </ItemGroup>
 
 </Project>

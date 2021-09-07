@@ -29,40 +29,32 @@ namespace CompareTranslatorXml
                     int index = strings.Count;
                     StringObject stringObject = new StringObject(
                         index,
-                        stringNode.Attributes["id"].InnerText,
-                        null,
-                        null,
-                        null
+                        stringNode.Attributes["id"].InnerText
                     );
 
-                    stringObject.GetType()
-                        .GetProperty(prop)
-                        .SetValue(stringObject, SecurityElement.Escape(stringNode.Attributes["text"].InnerText));
+                    string originProp = "Origin" + prop;
+                    string text = stringNode.Attributes["text"].InnerText.ToString();
+                    stringObject.SetData(prop, new MixedValue(text));
+                    stringObject.SetData(originProp, new MixedValue(text));
                     AddOrUpdate(prop, ref strings, stringObject);
                 }
             }
         }
 
-        private void AddOrUpdate(string prop, ref SortedBindingList<StringObject> strings, StringObject stringObject)
+        public void AddOrUpdate(string prop, ref SortedBindingList<StringObject> strings, StringObject stringObject)
         {
-            bool isExists = false;
             foreach (StringObject stringItem in strings)
             {
                 if (stringItem.Id == stringObject.Id)
                 {
-                    stringItem
-                        .GetType()
-                        .GetProperty(prop)
-                        .SetValue(
-                            stringItem,
-                            stringObject.GetType().GetProperty(prop).GetValue(stringObject, null)
-                        );
-                    isExists = true;
-                    break;
+                    // SecurityElement.Escape(stringNode.Attributes["text"].InnerText)
+                    // No escape value
+                    stringItem.SetData(prop, new MixedValue(stringObject.GetType().GetProperty(prop).GetValue(stringObject, null)));
+                    return;
                 }
             }
 
-            if(!isExists) strings.Add(stringObject);
+            strings.Add(stringObject);
         }
 
         public void AddOrUpdate(StringObject stringObj)

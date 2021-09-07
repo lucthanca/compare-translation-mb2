@@ -58,48 +58,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="clearData.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>104, 22</value>
-  </data>
-  <data name="clearData.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="exitItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>104, 22</value>
-  </data>
-  <data name="exitItem.Text" xml:space="preserve">
-    <value>Thoát</value>
-  </data>
-  <data name="fileItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>38, 20</value>
-  </data>
-  <data name="fileItem.Text" xml:space="preserve">
-    <value>Tệp</value>
-  </data>
-  <data name="optionsItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>111, 22</value>
-  </data>
-  <data name="optionsItem.Text" xml:space="preserve">
-    <value>Cài đặt</value>
-  </data>
-  <data name="editItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>72, 20</value>
-  </data>
-  <data name="editItem.Text" xml:space="preserve">
-    <value>Chỉnh sửa</value>
-  </data>
-  <data name="aboutItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>104, 22</value>
-  </data>
-  <data name="aboutItem.Text" xml:space="preserve">
-    <value>Về tôi</value>
-  </data>
-  <data name="helpItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>61, 20</value>
-  </data>
-  <data name="helpItem.Text" xml:space="preserve">
-    <value>Giúp đỡ</value>
-  </data>
   <data name="navMenu.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 0</value>
   </data>
@@ -124,6 +82,72 @@
   </data>
   <data name="&gt;&gt;navMenu.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="fileItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>38, 20</value>
+  </data>
+  <data name="fileItem.Text" xml:space="preserve">
+    <value>Tệp</value>
+  </data>
+  <data name="clearData.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>104, 22</value>
+  </data>
+  <data name="clearData.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="exitItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>104, 22</value>
+  </data>
+  <data name="exitItem.Text" xml:space="preserve">
+    <value>Thoát</value>
+  </data>
+  <data name="editItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>72, 20</value>
+  </data>
+  <data name="editItem.Text" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="optionsItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>111, 22</value>
+  </data>
+  <data name="optionsItem.Text" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="helpItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>61, 20</value>
+  </data>
+  <data name="helpItem.Text" xml:space="preserve">
+    <value>Giúp đỡ</value>
+  </data>
+  <data name="aboutItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>104, 22</value>
+  </data>
+  <data name="aboutItem.Text" xml:space="preserve">
+    <value>Về tôi</value>
+  </data>
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 539</value>
+  </data>
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>784, 22</value>
+  </data>
+  <data name="statusStrip.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="statusStrip.Text" xml:space="preserve">
+    <value>Status Bar</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="currentFileLbl.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>112, 17</value>
@@ -158,37 +182,145 @@
   <data name="progressStatus.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 539</value>
-  </data>
-  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>784, 22</value>
-  </data>
-  <data name="statusStrip.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="statusStrip.Text" xml:space="preserve">
-    <value>Status Bar</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
-    <value>statusStrip</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="inputContainer.ColumnCount" type="System.Int32, System.Private.CoreLib">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.Name" xml:space="preserve">
+    <value>VnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.Parent" xml:space="preserve">
+    <value>inputContainer</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="VnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="VnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="VnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,90" /&gt;&lt;Rows Styles="Absolute,32" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.Name" xml:space="preserve">
+    <value>CnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.Parent" xml:space="preserve">
+    <value>inputContainer</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="CnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,90" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.Name" xml:space="preserve">
+    <value>EnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.Parent" xml:space="preserve">
+    <value>inputContainer</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="EnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="EnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Absolute,87" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="inputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="inputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>10, 10</value>
+  </data>
+  <data name="inputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="inputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>764, 32</value>
+  </data>
+  <data name="inputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;inputContainer.Name" xml:space="preserve">
+    <value>inputContainer</value>
+  </data>
+  <data name="&gt;&gt;inputContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;inputContainer.Parent" xml:space="preserve">
+    <value>topPanel</value>
+  </data>
+  <data name="&gt;&gt;inputContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="inputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="VnInputContainer" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="CnInputContainer" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="EnInputContainer" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.32967,Percent,33.32967,Percent,33.34066" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="VnInputContainer.ColumnCount" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="&gt;&gt;VnLoadTxt.Name" xml:space="preserve">
+    <value>VnLoadTxt</value>
+  </data>
+  <data name="&gt;&gt;VnLoadTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VnLoadTxt.Parent" xml:space="preserve">
+    <value>VnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;VnLoadTxt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;VnLoadBtn.Name" xml:space="preserve">
+    <value>VnLoadBtn</value>
+  </data>
+  <data name="&gt;&gt;VnLoadBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VnLoadBtn.Parent" xml:space="preserve">
+    <value>VnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;VnLoadBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="VnInputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="VnInputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>508, 0</value>
+  </data>
+  <data name="VnInputContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="VnInputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="VnInputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>256, 32</value>
+  </data>
+  <data name="VnInputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.Name" xml:space="preserve">
+    <value>VnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.Parent" xml:space="preserve">
+    <value>inputContainer</value>
+  </data>
+  <data name="&gt;&gt;VnInputContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="VnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="VnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="VnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,90" /&gt;&lt;Rows Styles="Absolute,32" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="VnLoadTxt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
   </data>
@@ -246,41 +378,65 @@
   <data name="&gt;&gt;VnLoadBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="VnInputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="VnInputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>508, 0</value>
-  </data>
-  <data name="VnInputContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="VnInputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="VnInputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>256, 32</value>
-  </data>
-  <data name="VnInputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;VnInputContainer.Name" xml:space="preserve">
-    <value>VnInputContainer</value>
-  </data>
-  <data name="&gt;&gt;VnInputContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;VnInputContainer.Parent" xml:space="preserve">
-    <value>inputContainer</value>
-  </data>
-  <data name="&gt;&gt;VnInputContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="VnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="VnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="VnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,90" /&gt;&lt;Rows Styles="Absolute,32" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="CnInputContainer.ColumnCount" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;CnLoadTxt.Name" xml:space="preserve">
+    <value>CnLoadTxt</value>
+  </data>
+  <data name="&gt;&gt;CnLoadTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CnLoadTxt.Parent" xml:space="preserve">
+    <value>CnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;CnLoadTxt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CnLoadBtn.Name" xml:space="preserve">
+    <value>CnLoadBtn</value>
+  </data>
+  <data name="&gt;&gt;CnLoadBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CnLoadBtn.Parent" xml:space="preserve">
+    <value>CnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;CnLoadBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CnInputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="CnInputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>254, 0</value>
+  </data>
+  <data name="CnInputContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="CnInputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="CnInputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>254, 32</value>
+  </data>
+  <data name="CnInputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.Name" xml:space="preserve">
+    <value>CnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.Parent" xml:space="preserve">
+    <value>inputContainer</value>
+  </data>
+  <data name="&gt;&gt;CnInputContainer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="CnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,90" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="CnLoadTxt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -336,41 +492,65 @@
   <data name="&gt;&gt;CnLoadBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="CnInputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="CnInputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>254, 0</value>
-  </data>
-  <data name="CnInputContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="CnInputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="CnInputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>254, 32</value>
-  </data>
-  <data name="CnInputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;CnInputContainer.Name" xml:space="preserve">
-    <value>CnInputContainer</value>
-  </data>
-  <data name="&gt;&gt;CnInputContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CnInputContainer.Parent" xml:space="preserve">
-    <value>inputContainer</value>
-  </data>
-  <data name="&gt;&gt;CnInputContainer.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="CnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="CnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,90" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="EnInputContainer.ColumnCount" type="System.Int32, System.Private.CoreLib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;EnLoadTxt.Name" xml:space="preserve">
+    <value>EnLoadTxt</value>
+  </data>
+  <data name="&gt;&gt;EnLoadTxt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnLoadTxt.Parent" xml:space="preserve">
+    <value>EnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;EnLoadTxt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;EnLoadBtn.Name" xml:space="preserve">
+    <value>EnLoadBtn</value>
+  </data>
+  <data name="&gt;&gt;EnLoadBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnLoadBtn.Parent" xml:space="preserve">
+    <value>EnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;EnLoadBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EnInputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="EnInputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="EnInputContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="EnInputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="EnInputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>254, 32</value>
+  </data>
+  <data name="EnInputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.Name" xml:space="preserve">
+    <value>EnInputContainer</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.Parent" xml:space="preserve">
+    <value>inputContainer</value>
+  </data>
+  <data name="&gt;&gt;EnInputContainer.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="EnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="EnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Absolute,87" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="EnLoadTxt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -426,69 +606,6 @@
   <data name="&gt;&gt;EnLoadBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="EnInputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="EnInputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="EnInputContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="EnInputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="EnInputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>254, 32</value>
-  </data>
-  <data name="EnInputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;EnInputContainer.Name" xml:space="preserve">
-    <value>EnInputContainer</value>
-  </data>
-  <data name="&gt;&gt;EnInputContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EnInputContainer.Parent" xml:space="preserve">
-    <value>inputContainer</value>
-  </data>
-  <data name="&gt;&gt;EnInputContainer.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="EnInputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="EnLoadTxt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="EnLoadBtn" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Absolute,87" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="inputContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="inputContainer.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 10</value>
-  </data>
-  <data name="inputContainer.RowCount" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="inputContainer.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>764, 32</value>
-  </data>
-  <data name="inputContainer.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;inputContainer.Name" xml:space="preserve">
-    <value>inputContainer</value>
-  </data>
-  <data name="&gt;&gt;inputContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;inputContainer.Parent" xml:space="preserve">
-    <value>topPanel</value>
-  </data>
-  <data name="&gt;&gt;inputContainer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="inputContainer.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="VnInputContainer" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="CnInputContainer" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="EnInputContainer" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.32967,Percent,33.32967,Percent,33.34066" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="topPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -515,6 +632,57 @@
   </data>
   <data name="&gt;&gt;topPanel.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;reformatGridBtn.Name" xml:space="preserve">
+    <value>reformatGridBtn</value>
+  </data>
+  <data name="&gt;&gt;reformatGridBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reformatGridBtn.Parent" xml:space="preserve">
+    <value>actionPanel</value>
+  </data>
+  <data name="&gt;&gt;reformatGridBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;saveVnBtn.Name" xml:space="preserve">
+    <value>saveVnBtn</value>
+  </data>
+  <data name="&gt;&gt;saveVnBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveVnBtn.Parent" xml:space="preserve">
+    <value>actionPanel</value>
+  </data>
+  <data name="&gt;&gt;saveVnBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="actionPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="actionPanel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 77</value>
+  </data>
+  <data name="actionPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 3</value>
+  </data>
+  <data name="actionPanel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>784, 50</value>
+  </data>
+  <data name="actionPanel.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;actionPanel.Name" xml:space="preserve">
+    <value>actionPanel</value>
+  </data>
+  <data name="&gt;&gt;actionPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;actionPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;actionPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="reformatGridBtn.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>91, 13</value>
@@ -564,68 +732,8 @@
   <data name="&gt;&gt;saveVnBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="actionPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="actionPanel.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 77</value>
-  </data>
-  <data name="actionPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 3</value>
-  </data>
-  <data name="actionPanel.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>784, 50</value>
-  </data>
-  <data name="actionPanel.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;actionPanel.Name" xml:space="preserve">
-    <value>actionPanel</value>
-  </data>
-  <data name="&gt;&gt;actionPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;actionPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;actionPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="listTextGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data>
-  <metadata name="Index.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="Index.HeaderText" xml:space="preserve">
-    <value>Index</value>
-  </data>
-  <metadata name="Id.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <data name="Id.HeaderText" xml:space="preserve">
-    <value>Text ID</value>
-  </data>
-  <data name="En.HeaderText" xml:space="preserve">
-    <value>En</value>
-  </data>
-  <data name="Cn.HeaderText" xml:space="preserve">
-    <value>Cn</value>
-  </data>
-  <data name="Vn.HeaderText" xml:space="preserve">
-    <value>Vn</value>
-  </data>
-  <data name="listTextGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="listTextGrid.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 19</value>
-  </data>
-  <data name="listTextGrid.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>778, 384</value>
-  </data>
-  <data name="listTextGrid.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;listTextGrid.Name" xml:space="preserve">
     <value>listTextGrid</value>
@@ -662,6 +770,57 @@
   </data>
   <data name="&gt;&gt;listTextGroup.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="Index.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <metadata name="Id.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="listTextGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="listTextGrid.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>3, 19</value>
+  </data>
+  <data name="listTextGrid.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>778, 384</value>
+  </data>
+  <data name="listTextGrid.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;listTextGrid.Name" xml:space="preserve">
+    <value>listTextGrid</value>
+  </data>
+  <data name="&gt;&gt;listTextGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listTextGrid.Parent" xml:space="preserve">
+    <value>listTextGroup</value>
+  </data>
+  <data name="&gt;&gt;listTextGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="Index.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Index.HeaderText" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <metadata name="Id.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Id.HeaderText" xml:space="preserve">
+    <value>Text ID</value>
+  </data>
+  <data name="En.HeaderText" xml:space="preserve">
+    <value>En</value>
+  </data>
+  <data name="Cn.HeaderText" xml:space="preserve">
+    <value>Cn</value>
+  </data>
+  <data name="Vn.HeaderText" xml:space="preserve">
+    <value>Vn</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
